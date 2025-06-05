@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fashion House</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Maison Vellor</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><button id="cart-btn">Cart (<span id="cart-count">0</span>)</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Unleash Your Style</h2>
+    <p>Explore the latest trends in fashion</p>
+    <button>Shop Now</button>
+  </section>
+
+  <section class="products">
+    <h2>New Arrivals</h2>
+
+    <div class="filters">
+      <input type="text" id="search-input" placeholder="Search products..." />
+      <select id="price-filter">
+        <option value="all">All prices</option>
+        <option value="under50">Under $50</option>
+        <option value="50to70">$50 - $70</option>
+        <option value="above70">Above $70</option>
+      </select>
+    </div>
+
+    <div class="product-grid" id="product-grid">
+      <!-- Products inserted dynamically -->
+    </div>
+  </section>
+
+  <!-- Product Detail Modal -->
+  <div id="product-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" id="modal-close">&times;</span>
+      <img id="modal-image" src="" alt="Product Image" />
+      <h3 id="modal-title"></h3>
+      <p id="modal-description"></p>
+      <p><strong>Price: </strong>$<span id="modal-price"></span></p>
+      <button id="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Shopping Cart Sidebar -->
+  <div id="cart-sidebar" class="cart-sidebar hidden">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
+    <button id="checkout-btn">Checkout</button>
+    <button id="close-cart-btn">Close</button>
+  </div>
+
+  <footer>
+    <p>© 2025 Fashion House. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
